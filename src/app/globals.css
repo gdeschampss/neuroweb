@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111111;
+  --foreground: #ffffff;
+  --font-inter: "Inter", sans-serif;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  
+  --color-primary: #e26719;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #222222;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #1e1e1e;
+  --color-muted-foreground: #a3a3a3;
+  --color-accent: #222222;
+  --color-accent-foreground: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-input: rgba(255, 255, 255, 0.08);
+  --color-ring: #e26719;
+  
+  /* Brand specific colors mapped to tailwind utility classes */
+  --color-brand-orange: #e26719;
+  --color-brand-orange-hover: #f97d2e;
+  --color-brand-orange-glow: rgba(226, 103, 25, 0.15);
+  --color-brand-dark: #111111;
+  --color-brand-card: #181818;
+  --color-brand-card-hover: #222222;
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+  --color-brand-border-orange: rgba(226, 103, 25, 0.3);
+}
+
+/* Global scroll behavior and base styles */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom glow effect */
+.glow-orange {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(226, 103, 25, 0.12) 0%, rgba(0,0,0,0) 70%);
+  filter: blur(40px);
+  z-index: 0;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e26719;
+}
+
