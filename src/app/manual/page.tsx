@@ -22,7 +22,8 @@ import {
   Info,
   Layers,
   Wrench,
-  AlertTriangle
+  AlertTriangle,
+  Stars
 } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -188,7 +189,7 @@ export default function ManualPage() {
               <div className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-4">
                 Tópicos do Manual
               </div>
-              <nav className="space-y-1">
+              <nav className="space-y-1 mb-6">
                 {sections.map((section) => (
                   <a
                     key={section.id}
@@ -205,6 +206,21 @@ export default function ManualPage() {
                   </a>
                 ))}
               </nav>
+
+              {/* Glowing CTA Button */}
+              <div className="pt-4 border-t border-brand-border/40">
+                <Link
+                  href="/por-que-site"
+                  className="group flex flex-col items-center justify-center gap-1.5 p-4 rounded-xl bg-brand-orange/5 border border-brand-orange/20 hover:border-brand-orange/50 transition-all duration-300 text-center shadow-[0_0_15px_rgba(45,181,175,0.05)] hover:shadow-[0_0_20px_rgba(45,181,175,0.15)] cursor-pointer"
+                >
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#2db5af] group-hover:text-[#3dded7] transition-colors">
+                    Funil & Vendas
+                  </span>
+                  <span className="text-xs font-black text-white group-hover:shimmer-text transition-all duration-300 flex items-center gap-1">
+                    Por que ter um Site? <Stars className="h-3.5 w-3.5 text-[#2db5af]" />
+                  </span>
+                </Link>
+              </div>
             </aside>
 
             {/* Document Content */}

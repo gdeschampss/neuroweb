@@ -65,7 +65,7 @@ export default function Hero() {
         {/* Big Headline (Inter Black) */}
         <h1 className="font-sans font-[900] text-4xl sm:text-6xl md:text-7xl text-white tracking-tight leading-[1.05] max-w-4xl mb-6">
           CONSTRUÍMOS WEBSITES QUE{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange via-orange-400 to-yellow-500 shadow-sm">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2db5af] via-[#3dd3cc] to-[#a2f9f5] shadow-sm">
             ALAVANCAM
           </span>{" "}
           O SEU NEGÓCIO

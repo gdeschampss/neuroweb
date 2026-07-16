@@ -46,7 +46,7 @@ export default function ContatoForm() {
   };
 
   const formatWhatsAppMessage = () => {
-    const baseText = `Olá Gabriel! Gostaria de solicitar um orçamento para meu website.\n\n`;
+    const baseText = `Olá Gabriel. Eu respondi o formulário da neuroweb e gostaria de solicitar um orçamento.\n\n`;
     const details = `*Nome:* ${formData.nome}\n*E-mail:* ${formData.email}\n*Telefone:* ${formData.telefone}\n*Detalhes do Projeto:* ${formData.mensagem}`;
     return encodeURIComponent(baseText + details);
   };
@@ -104,7 +104,7 @@ export default function ContatoForm() {
               </a>
 
               <a
-                href="mailto:contato@deschamps.com" // Placeholder for professional email
+                href="mailto:contato@neuroweb.com.br" // Placeholder for professional email
                 className="flex items-center gap-4 group p-4 rounded-xl bg-[#181818] border border-brand-border hover:border-brand-border-orange transition-colors duration-300"
               >
                 <div className="h-12 w-12 rounded-lg bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange group-hover:bg-brand-orange group-hover:text-[#111111] transition-all duration-300">
@@ -113,7 +113,7 @@ export default function ContatoForm() {
                 <div>
                   <span className="text-xs text-gray-500 block uppercase font-bold">E-mail Corporativo</span>
                   <span className="text-sm sm:text-base text-white group-hover:text-brand-orange transition-colors duration-200">
-                    gabrielsdeschamps@gmail.com
+                    contato@neuroweb.com.br
                   </span>
                 </div>
               </a>
@@ -129,7 +129,7 @@ export default function ContatoForm() {
                   Mensagem Validada!
                 </h3>
                 <p className="text-gray-400 text-sm max-w-xs leading-relaxed mb-6">
-                  Estamos redirecionando você para o WhatsApp de Gabriel para finalizar o orçamento do seu site.
+                  Estamos redirecionando você para o WhatsApp da NeuroWeb para finalizar o orçamento do seu site.
                 </p>
                 <span className="inline-block h-1 w-24 bg-brand-orange/20 rounded-full overflow-hidden relative">
                   <span className="absolute top-0 left-0 bottom-0 bg-brand-orange w-1/2 animate-shimmer rounded-full" />

@@ -57,7 +57,7 @@ export default function Processos() {
             return (
               <div
                 key={idx}
-                className="group relative bg-[#181818] border border-brand-border hover:border-brand-orange-orange/30 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(226,103,25,0.1)] flex flex-col"
+                className="group relative bg-[#181818] border border-brand-border hover:border-brand-orange/30 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(45,181,175,0.1)] flex flex-col"
               >
                 {/* Step Number Badge */}
                 <div className="flex items-center justify-between mb-6">
@@ -80,7 +80,7 @@ export default function Processos() {
                 </p>
 
                 {/* Bottom decorative bar */}
-                <div className="absolute bottom-0 inset-x-8 h-[2px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-brand-orange group-hover:to-orange-500 transition-all duration-300" />
+                <div className="absolute bottom-0 inset-x-8 h-[2px] bg-transparent group-hover:bg-gradient-to-r group-hover:from-brand-orange group-hover:to-[#3dded7] transition-all duration-300" />
               </div>
             );
           })}

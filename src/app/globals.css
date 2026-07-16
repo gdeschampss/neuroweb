@@ -11,7 +11,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   
-  --color-primary: #e26719;
+  --color-primary: #2db5af;
   --color-primary-foreground: #ffffff;
   --color-secondary: #222222;
   --color-secondary-foreground: #ffffff;
@@ -21,17 +21,18 @@
   --color-accent-foreground: #ffffff;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-input: rgba(255, 255, 255, 0.08);
-  --color-ring: #e26719;
+  --color-ring: #2db5af;
   
   /* Brand specific colors mapped to tailwind utility classes */
-  --color-brand-orange: #e26719;
-  --color-brand-orange-hover: #f97d2e;
-  --color-brand-orange-glow: rgba(226, 103, 25, 0.15);
+  --color-brand-teal: #2db5af;
+  --color-brand-orange: var(--color-brand-teal);
+  --color-brand-orange-hover: #3dded7;
+  --color-brand-orange-glow: rgba(45, 181, 175, 0.15);
   --color-brand-dark: #111111;
   --color-brand-card: #181818;
   --color-brand-card-hover: #222222;
   --color-brand-border: rgba(255, 255, 255, 0.08);
-  --color-brand-border-orange: rgba(226, 103, 25, 0.3);
+  --color-brand-border-orange: rgba(45, 181, 175, 0.3);
 }
 
 /* Global scroll behavior and base styles */
@@ -51,7 +52,7 @@ body {
 .glow-orange {
   position: absolute;
   pointer-events: none;
-  background: radial-gradient(circle, rgba(226, 103, 25, 0.12) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(45, 181, 175, 0.12) 0%, rgba(0,0,0,0) 70%);
   filter: blur(40px);
   z-index: 0;
 }
@@ -68,6 +69,26 @@ body {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #e26719;
+  background: #2db5af;
+}
+
+/* Text Shimmer Effect */
+@keyframes text-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #2db5af, #80f1eb, #2db5af);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-shimmer 2.5s linear infinite;
 }
 

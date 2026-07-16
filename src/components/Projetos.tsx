@@ -6,25 +6,18 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "Landing Page Premium",
+    title: "Landing Page de Serviços",
     category: "Vendas & Conversão",
-    desc: "LP com design de altíssimo impacto visual, Copy de persuasão focada em leads e estrutura ultra otimizada para carregar em milissegundos.",
-    image: "/fonts-design/image.png",
-    tags: ["Next.js", "Framer Motion", "SEO Pro"],
+    desc: "Landing page de altíssima performance para profissionais liberais e prestadores de serviço (como advogados e consultores). Estrutura estratégica focada em captação de leads.",
+    image: "/fonts-design/15b91e88f58ad474794fddd4cfa6e25a.jpg",
+    tags: ["Conversão", "Next.js", "SEO Pro"],
   },
   {
     title: "Website Institucional",
     category: "Branding & Presença",
-    desc: "Apresentação de negócios de luxo e marcas consolidadas. Arquitetura multi-páginas de alto padrão para transmitir autoridade e confiança absoluta.",
-    image: "/fonts-design/image copy.png",
-    tags: ["React", "UI/UX Figma", "Multilingue"],
-  },
-  {
-    title: "E-Commerce de Luxo",
-    category: "Vendas Online",
-    desc: "Loja virtual moderna e rápida, com fluxo de checkout fluido, design personalizado de produtos e integrações automatizadas de pagamento.",
-    image: "/fonts-design/image copy 3.png",
-    tags: ["Stripe / Pix", "Dashboard Admin", "Next.js"],
+    desc: "Apresentação corporativa de alto padrão para empresas e escritórios de advocacia. Multi-páginas estruturadas para transmitir o máximo de autoridade e segurança.",
+    image: "/fonts-design/c1f3408384ac3ed65f6bda403e2ada10.jpg",
+    tags: ["React", "UI/UX Figma", "Institucional"],
   },
 ];
 
@@ -50,11 +43,11 @@ export default function Projetos() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="group bg-[#181818] border border-brand-border hover:border-brand-border-orange rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_12px_40px_rgba(226,103,25,0.08)] flex flex-col"
+              className="group bg-[#181818] border border-brand-border hover:border-brand-border-orange rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_12px_40px_rgba(45, 181, 175, 0.08)] flex flex-col"
             >
               {/* Image Container with Zoom effect */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-brand-dark flex items-center justify-center">
@@ -63,7 +56,7 @@ export default function Projetos() {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105 group-hover:opacity-90"
-                  sizes="(max-w-768px) 100vw, 33vw"
+                  sizes="(max-w-768px) 100vw, 50vw"
                 />
                 {/* Visual Glassmorphic Overlay */}
                 <div className="absolute inset-0 bg-[#111111]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

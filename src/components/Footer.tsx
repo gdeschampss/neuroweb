@@ -40,13 +40,15 @@ export default function Footer() {
           <Link
             href="/"
             onClick={handleScrollToTop}
-            className="flex items-center gap-2 mb-6 group cursor-pointer w-fit"
+            className="flex items-center gap-3 mb-6 group cursor-pointer w-fit"
           >
-            <div className="h-9 w-9 rounded-lg bg-brand-orange flex items-center justify-center font-bold text-[#111111] text-xl transition-transform duration-300 group-hover:scale-105 shadow-[0_0_10px_rgba(226,103,25,0.4)]">
-              GD
-            </div>
-            <span className="font-sans font-black text-xl tracking-tight text-white transition-colors duration-300 group-hover:text-brand-orange">
-              DESCHAMPS<span className="text-brand-orange">.</span>
+            <img
+              src="/fonts-design/logo3d.png"
+              alt="NeuroFlow Logo"
+              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="font-sans font-black text-xl tracking-tight text-white transition-colors duration-300 group-hover:text-brand-orange uppercase">
+              NEUROFLOW<span className="text-brand-orange">.</span>
             </span>
           </Link>
           <p className="text-sm text-gray-400 max-w-sm leading-relaxed mb-6">
@@ -55,7 +57,7 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/gabrieldeschampss/"
+              href="https://www.instagram.com/ianeuroflow/"
               target="_blank"
               rel="noopener noreferrer"
               className="h-10 w-10 rounded-full bg-[#181818] border border-brand-border flex items-center justify-center text-white hover:text-brand-orange hover:border-brand-orange transition-all duration-300"
@@ -148,11 +150,22 @@ export default function Footer() {
                 <ArrowRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
               </Link>
             </li>
+            <li>
+              <a
+                href="https://www.ianeuroflow.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 hover:text-brand-orange transition-colors duration-200 group"
+              >
+                Conheça a NeuroFlow
+                <ArrowRight className="h-3 w-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+              </a>
+            </li>
             <li className="flex items-start gap-2 pt-2 text-xs text-gray-500 border-t border-brand-border/40">
               <MapPin className="h-4 w-4 text-brand-orange shrink-0 mt-0.5" />
               <span>
-                Brusque, Santa Catarina<br />
-                Atendimento Online Internacional
+                R. Uganda, 190 - Nações<br />
+                Balneário Camboriú - SC, 88338-160, Brasil
               </span>
             </li>
           </ul>
@@ -162,7 +175,7 @@ export default function Footer() {
       {/* Copyright Bar */}
       <div className="max-w-7xl mx-auto px-6 border-t border-brand-border/40 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
         <span>
-          &copy; {new Date().getFullYear()} Gabriel Deschamps. Todos os direitos reservados.
+          &copy; {new Date().getFullYear()} NeuroWeb / NeuroFlow. Todos os direitos reservados.
         </span>
         <div className="flex items-center gap-6">
           <Link href="/manual" className="hover:text-white transition-colors duration-200">

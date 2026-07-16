@@ -19,7 +19,7 @@ export default function InteractiveHoverButton({
   return (
     <button
       onClick={onClick}
-      className={`group relative flex items-center justify-center cursor-pointer overflow-hidden rounded-full border border-brand-orange/30 bg-transparent px-6 py-3 font-semibold text-white transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_20px_rgba(226,103,25,0.35)] outline-none select-none min-w-[160px] ${className || ""}`}
+      className={`group relative flex items-center justify-center cursor-pointer overflow-hidden rounded-full border border-brand-orange/30 bg-transparent px-6 py-3 font-semibold text-white transition-all duration-300 hover:border-brand-orange hover:shadow-[0_0_20px_rgba(45, 181, 175, 0.35)] outline-none select-none min-w-[160px] ${className || ""}`}
       {...props}
     >
       {/* Button Text */}

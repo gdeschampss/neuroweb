@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Deschamps | Websites & LPs de Alto Padrão",
+  title: "NeuroWeb | Websites & LPs de Alto Padrão",
   description: "Desenvolvimento de websites e landing pages de altíssimo padrão, rápidos, responsivos e otimizados para vendas. Destaque-se no mercado digital.",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-brand-dark text-white selection:bg-brand-orange selection:text-white">
+      <body className="min-h-full flex flex-col bg-brand-dark text-white selection:bg-brand-orange selection:text-brand-dark">
         {children}
       </body>
     </html>

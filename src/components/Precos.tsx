@@ -78,7 +78,7 @@ const pricingPlans: PricingPlan[] = [
       "Suporte técnico dedicado pós-lançamento",
     ],
     description: "Ideal para plataformas, portais ou sistemas web robustos.",
-    buttonText: "Falar com Gabriel",
+    buttonText: "Falar com a NeuroWeb",
     href: "#contato",
     isPopular: false,
   },
