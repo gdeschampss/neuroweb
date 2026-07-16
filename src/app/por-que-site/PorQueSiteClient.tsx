@@ -83,10 +83,10 @@ export default function PorQueSiteClient() {
           {/* Browser Mockup with 3D perspective effect */}
           <div 
             className="w-full max-w-[800px] aspect-[16/10] bg-[#181818] border border-brand-border rounded-xl shadow-[0_30px_70px_rgba(0,0,0,0.8)] overflow-hidden select-none mb-20"
-            style={isDesktop ? { 
+            style={{ 
               transform: "perspective(1200px) rotateX(10deg) rotateY(-5deg) rotateZ(1deg)",
               transformStyle: "preserve-3d"
-            } : undefined}
+            }}
           >
             {/* Browser Header Tab Bar */}
             <div className="h-8 bg-[#151515] border-b border-brand-border/60 flex items-center px-4 justify-between">
@@ -109,7 +109,8 @@ export default function PorQueSiteClient() {
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
+                poster="/fonts-design/por-que-site-poster.png"
               >
                 <source src="/fonts-design/Lpaltaconverscao.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos HTML5.

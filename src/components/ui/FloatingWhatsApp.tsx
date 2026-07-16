@@ -86,8 +86,8 @@ export default function FloatingWhatsApp() {
         aria-label="Fale Conosco no WhatsApp"
       >
         {/* Pulsing rings */}
-        <span className="absolute h-14 w-14 rounded-full bg-brand-orange/20 animate-ping pointer-events-none" />
-        <span className="absolute h-12 w-12 rounded-full bg-brand-orange/40 animate-pulse pointer-events-none" />
+        <span className="hidden md:absolute h-14 w-14 rounded-full bg-brand-orange/20 animate-ping pointer-events-none" />
+        <span className="hidden md:absolute h-12 w-12 rounded-full bg-brand-orange/40 animate-pulse pointer-events-none" />
 
         {/* Main Button */}
         <div className="relative h-12 w-12 rounded-full bg-[#111111] border border-brand-orange/30 group-hover:border-brand-orange flex items-center justify-center shadow-[0_0_15px_rgba(45,181,175,0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(45,181,175,0.5)]">

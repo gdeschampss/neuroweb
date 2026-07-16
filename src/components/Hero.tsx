@@ -16,27 +16,18 @@ export default function Hero() {
   const rigScale = useTransform(scrollY, [0, 400], [0.86, 1.0]);
   const screenRotateX = useTransform(scrollY, [0, 400], [-100, 0]);
 
-  const rigStyle = isDesktop
-    ? {
-        rotateY: rigRotateY,
-        rotateX: rigRotateX,
-        scale: rigScale,
-        transformStyle: "preserve-3d" as const,
-      }
-    : {
-        transformStyle: "preserve-3d" as const,
-      };
+  const rigStyle = {
+    rotateY: rigRotateY,
+    rotateX: rigRotateX,
+    scale: rigScale,
+    transformStyle: "preserve-3d" as const,
+  };
 
-  const screenStyle = isDesktop
-    ? {
-        rotateX: screenRotateX,
-        transformOrigin: "bottom center",
-        transformStyle: "preserve-3d" as const,
-      }
-    : {
-        transformOrigin: "bottom center",
-        transformStyle: "preserve-3d" as const,
-      };
+  const screenStyle = {
+    rotateX: screenRotateX,
+    transformOrigin: "bottom center",
+    transformStyle: "preserve-3d" as const,
+  };
 
   const handleScrollToSection = (id: string) => {
     const target = document.getElementById(id);
@@ -104,35 +95,36 @@ export default function Hero() {
           >
             {/* Laptop Screen Structure */}
             <motion.div
-              style={screenStyle}
-              className="relative w-full aspect-[16/10] bg-[#1a1a1a] border-[6px] md:border-[12px] border-[#252525] rounded-2xl md:rounded-t-[30px] md:rounded-b-none shadow-[0_20px_40px_rgba(0,0,0,0.7)] overflow-hidden flex items-center justify-center"
-            >
-              {/* Top Webcam Notch */}
-              <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#111] z-30" />
-              
-              {/* Screen Inner Display */}
-              <div className="relative w-full h-full bg-[#111111] overflow-hidden">
-                <video
-                  className="w-full h-full object-cover opacity-90"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src="/fonts-design/HomePageNotebook.mp4" type="video/mp4" />
-                  Seu navegador não suporta vídeos HTML5.
-                </video>
-                {/* Overlay shadow for display depth */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
-              </div>
-            </motion.div>
+               style={screenStyle}
+               className="relative w-full aspect-[16/10] bg-[#1a1a1a] border-[8px] sm:border-[12px] border-[#252525] rounded-t-[20px] sm:rounded-t-[30px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] overflow-hidden flex items-center justify-center"
+             >
+               {/* Top Webcam Notch */}
+               <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#111] z-30" />
+               
+               {/* Screen Inner Display */}
+               <div className="relative w-full h-full bg-[#111111] overflow-hidden">
+                 <video
+                   className="w-full h-full object-cover opacity-90"
+                   autoPlay
+                   loop
+                   muted
+                   playsInline
+                   preload="metadata"
+                   poster="/fonts-design/homepage-notebook-poster.png"
+                 >
+                   <source src="/fonts-design/HomePageNotebook.mp4" type="video/mp4" />
+                   Seu navegador não suporta vídeos HTML5.
+                 </video>
+                 {/* Overlay shadow for display depth */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+               </div>
+             </motion.div>
 
-            {/* Laptop Base (Keyboard/Chassis) */}
-            <div className="hidden md:flex relative w-[108%] h-3 sm:h-4 bg-gradient-to-b from-[#3a3a3a] via-[#222222] to-[#151515] rounded-b-[10px] sm:rounded-b-[15px] -left-[4%] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex justify-center">
-              {/* Notch Opening */}
-              <div className="w-16 sm:w-24 h-1 bg-[#111111] rounded-b-md" />
-            </div>
+             {/* Laptop Base (Keyboard/Chassis) */}
+             <div className="relative w-[108%] h-3 sm:h-4 bg-gradient-to-b from-[#3a3a3a] via-[#222222] to-[#151515] rounded-b-[10px] sm:rounded-b-[15px] -left-[4%] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex justify-center">
+               {/* Notch Opening */}
+               <div className="w-16 sm:w-24 h-1 bg-[#111111] rounded-b-md" />
+             </div>
 
             {/* Reflections/Shadow on Ground */}
             <div className="absolute top-[100%] left-[-5%] right-[-5%] h-8 bg-gradient-to-b from-brand-orange/5 to-transparent blur-xl rounded-full z-10 pointer-events-none" />

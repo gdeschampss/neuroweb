@@ -98,6 +98,10 @@ body {
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: text-shimmer 2.5s linear infinite;
+}
+@media (min-width: 768px) {
+  .shimmer-text {
+    animation: text-shimmer 2.5s linear infinite;
+  }
 }
 
