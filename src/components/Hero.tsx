@@ -105,7 +105,7 @@ export default function Hero() {
             {/* Laptop Screen Structure */}
             <motion.div
               style={screenStyle}
-              className="relative w-full aspect-[16/10] bg-[#1a1a1a] border-[8px] sm:border-[12px] border-[#252525] rounded-t-[20px] sm:rounded-t-[30px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] overflow-hidden flex items-center justify-center"
+              className="relative w-full aspect-[16/10] bg-[#1a1a1a] border-[6px] md:border-[12px] border-[#252525] rounded-2xl md:rounded-t-[30px] md:rounded-b-none shadow-[0_20px_40px_rgba(0,0,0,0.7)] overflow-hidden flex items-center justify-center"
             >
               {/* Top Webcam Notch */}
               <div className="absolute top-1 sm:top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#111] z-30" />
@@ -118,7 +118,7 @@ export default function Hero() {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="metadata"
                 >
                   <source src="/fonts-design/HomePageNotebook.mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos HTML5.
@@ -129,7 +129,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Laptop Base (Keyboard/Chassis) */}
-            <div className="relative w-[108%] h-3 sm:h-4 bg-gradient-to-b from-[#3a3a3a] via-[#222222] to-[#151515] rounded-b-[10px] sm:rounded-b-[15px] -left-[4%] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex justify-center">
+            <div className="hidden md:flex relative w-[108%] h-3 sm:h-4 bg-gradient-to-b from-[#3a3a3a] via-[#222222] to-[#151515] rounded-b-[10px] sm:rounded-b-[15px] -left-[4%] z-20 shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex justify-center">
               {/* Notch Opening */}
               <div className="w-16 sm:w-24 h-1 bg-[#111111] rounded-b-md" />
             </div>

@@ -5,12 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Stars } from "lucide-react";
 import InteractiveHoverButton from "./ui/InteractiveHoverButton";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
   const pathname = usePathname();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +48,7 @@ export default function Navbar() {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
-      const navbarHeight = showBanner ? 116 : 80;
+      const navbarHeight = (showBanner && isDesktop) ? 116 : 80;
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
       window.scrollTo({
         top: targetPosition,
@@ -59,7 +61,7 @@ export default function Navbar() {
     <>
       {/* Top promotional banner */}
       {showBanner && (
-        <div className="fixed top-0 left-0 right-0 z-50 h-9 bg-gradient-to-r from-[#141414] via-[#2db5af]/30 to-[#141414] border-b border-[#2db5af]/20 text-white text-[11px] md:text-xs px-4 flex items-center justify-center gap-2 md:gap-3 transition-all duration-300 font-sans shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
+        <div className="hidden md:flex fixed top-0 left-0 right-0 z-50 h-9 bg-gradient-to-r from-[#141414] via-[#2db5af]/30 to-[#141414] border-b border-[#2db5af]/20 text-white text-[11px] md:text-xs px-4 flex items-center justify-center gap-2 md:gap-3 transition-all duration-300 font-sans shadow-[0_2px_15px_rgba(0,0,0,0.5)]">
           <span className="font-medium tracking-wide text-gray-200">
             🚀 Seu site atual não vende? Criamos páginas de alta performance e conversão com design padrão internacional.
           </span>
@@ -69,7 +71,7 @@ export default function Navbar() {
               const target = document.getElementById("contato");
               if (target) {
                 e.preventDefault();
-                const navbarHeight = showBanner ? 116 : 80;
+                const navbarHeight = (showBanner && isDesktop) ? 116 : 80;
                 const targetPosition = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
                 window.scrollTo({ top: targetPosition, behavior: "smooth" });
               }
@@ -89,8 +91,9 @@ export default function Navbar() {
       )}
 
       <nav
-        style={{ top: showBanner ? "36px" : "0" }}
         className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
+          showBanner ? "top-0 md:top-9" : "top-0"
+        } ${
           scrolled
             ? "bg-[#111111]/80 backdrop-blur-md border-b border-brand-border py-4 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
             : "bg-transparent py-6"

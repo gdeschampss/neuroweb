@@ -7,8 +7,10 @@ import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import DisplayCards from "@/components/ui/display-cards";
 import InteractiveHoverButton from "@/components/ui/InteractiveHoverButton";
 import { Sparkles, Compass, Target, ShieldCheck, ArrowRight, Laptop, Smartphone, FileText, Stars } from "lucide-react";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 export default function PorQueSiteClient() {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
   const cardsData = [
     {
       title: "Vitrina de Autoridade",
@@ -81,10 +83,10 @@ export default function PorQueSiteClient() {
           {/* Browser Mockup with 3D perspective effect */}
           <div 
             className="w-full max-w-[800px] aspect-[16/10] bg-[#181818] border border-brand-border rounded-xl shadow-[0_30px_70px_rgba(0,0,0,0.8)] overflow-hidden select-none mb-20"
-            style={{ 
+            style={isDesktop ? { 
               transform: "perspective(1200px) rotateX(10deg) rotateY(-5deg) rotateZ(1deg)",
               transformStyle: "preserve-3d"
-            }}
+            } : undefined}
           >
             {/* Browser Header Tab Bar */}
             <div className="h-8 bg-[#151515] border-b border-brand-border/60 flex items-center px-4 justify-between">
