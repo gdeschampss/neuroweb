@@ -24,8 +24,16 @@ const projects = [
 export default function Projetos() {
   return (
     <section id="projetos" className="relative py-24 bg-[#111111] overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none z-0 opacity-80" 
+        style={{ backgroundImage: "url('/imgs/projects-bg.png')" }} 
+      />
+      {/* Soft gradient mask for readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/95 via-[#111111]/80 to-[#111111] pointer-events-none z-0" />
+
       {/* Glow Effects */}
-      <div className="absolute top-[30%] left-10 w-[350px] h-[350px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[30%] left-10 w-[350px] h-[350px] bg-[#2db5af]/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
@@ -94,6 +102,15 @@ export default function Projetos() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Borderless design showcase banner ("imagem seca" that blends with background) */}
+        <div className="mt-12 w-full max-w-5xl mx-auto flex justify-center select-none pointer-events-none">
+          <img 
+            src="/imgs/design-showcase.png" 
+            alt="Design Showcase Banner" 
+            className="w-full h-auto object-contain opacity-95"
+          />
         </div>
       </div>
     </section>

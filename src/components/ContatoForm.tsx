@@ -68,7 +68,8 @@ export default function ContatoForm() {
   return (
     <section id="contato" className="relative py-24 bg-[#111111] overflow-hidden">
       {/* Background Decorative Glow */}
-      <div className="absolute bottom-[-100px] left-10 w-[450px] h-[450px] bg-brand-orange/5 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-100px] left-10 w-[450px] h-[450px] bg-[#2db5af]/5 blur-[130px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-[10%] right-[-120px] w-[400px] h-[400px] bg-[#2db5af]/4 blur-[110px] rounded-full pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

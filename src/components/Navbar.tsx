@@ -159,10 +159,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/por-que-site"
-              className="text-sm font-bold border-l border-brand-border pl-6 transition-all duration-200 hover:opacity-90 shrink-0 flex items-center gap-1"
+              className="text-sm font-bold border-l border-brand-border pl-6 transition-all duration-200 hover:opacity-90 shrink-0 flex items-center gap-1 group"
             >
-              <span className="shimmer-text font-black">Por que ter um Site?</span>
-              <Stars className="h-4 w-4 text-[#2db5af]" />
+              <span className="text-[#2db5af] font-black group-hover:text-[#3dded7] transition-colors duration-200">Por que ter um Site?</span>
+              <Stars className="h-4 w-4 text-[#2db5af] group-hover:text-[#3dded7] transition-colors duration-200" />
             </Link>
           </div>
 
@@ -240,10 +240,10 @@ export default function Navbar() {
             </Link>
             <Link
               href="/por-que-site"
-              className="text-base font-bold w-full py-1 flex items-center gap-1"
+              className="text-base font-bold w-full py-1 flex items-center gap-1 group"
             >
-              <span className="shimmer-text font-black">Por que ter um Site?</span>
-              <Stars className="h-4 w-4 text-[#2db5af]" />
+              <span className="text-[#2db5af] font-black group-hover:text-[#3dded7] transition-colors duration-200">Por que ter um Site?</span>
+              <Stars className="h-4 w-4 text-[#2db5af] group-hover:text-[#3dded7] transition-colors duration-200" />
             </Link>
             <div className="w-full pt-2">
               <InteractiveHoverButton

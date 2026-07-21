@@ -173,7 +173,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="max-w-7xl mx-auto px-6 border-t border-brand-border/40 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <div className="max-w-7xl mx-auto px-6 border-t border-brand-border/40 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4 relative z-10">
         <span>
           &copy; {new Date().getFullYear()} NeuroWeb / NeuroFlow. Todos os direitos reservados.
         </span>
@@ -185,6 +185,13 @@ export default function Footer() {
             Políticas de Privacidade
           </Link>
         </div>
+      </div>
+
+      {/* Giant Background Text inspired by Podium */}
+      <div className="w-full overflow-hidden select-none pointer-events-none -mb-8 mt-4 relative z-0">
+        <h1 className="font-sans font-black text-[22vw] leading-none text-white/[0.012] sm:text-white/[0.02] text-center tracking-tighter uppercase translate-y-[32%] sm:translate-y-[28%] lg:translate-y-[20%]">
+          NEUROWEB
+        </h1>
       </div>
     </footer>
   );

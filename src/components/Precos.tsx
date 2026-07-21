@@ -91,31 +91,6 @@ export default function Precos() {
 
   const handleToggle = (checked: boolean) => {
     setIsMonthly(!checked);
-    if (checked && switchRef.current) {
-      const rect = switchRef.current.getBoundingClientRect();
-      const x = rect.left + rect.width / 2;
-      const y = rect.top + rect.height / 2;
-
-      confetti({
-        particleCount: 70,
-        spread: 60,
-        origin: {
-          x: x / window.innerWidth,
-          y: y / window.innerHeight,
-        },
-        colors: [
-          "#e26719",
-          "#f97d2e",
-          "#ffffff",
-          "#444444",
-        ],
-        ticks: 200,
-        gravity: 1.2,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["circle"],
-      });
-    }
   };
 
   const handleSelectPlan = (planName: string) => {
@@ -129,7 +104,8 @@ export default function Precos() {
   return (
     <section id="precos" className="relative py-24 bg-[#111111] overflow-hidden">
       {/* Glow Effects */}
-      <div className="absolute top-[40%] right-[-100px] w-[500px] h-[500px] bg-brand-orange/5 blur-[130px] rounded-full pointer-events-none" />
+      <div className="absolute top-[40%] right-[-100px] w-[500px] h-[500px] bg-[#2db5af]/5 blur-[130px] rounded-full pointer-events-none z-0" />
+      <div className="absolute bottom-[10%] left-[-150px] w-[450px] h-[450px] bg-[#2db5af]/4 blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="container max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">

@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Showcase3D from "@/components/Showcase3D";
 import Processos from "@/components/Processos";
 import Projetos from "@/components/Projetos";
 import Precos from "@/components/Precos";
@@ -23,6 +24,9 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Banner (Laptop Video Mockup) */}
         <Hero />
+
+        {/* 3D Interactive Device Showcase */}
+        <Showcase3D />
 
         {/* Workflow Steps Section */}
         <Processos />
